@@ -1,145 +1,508 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090909">
-<title>ZXSHOOTS — Capture the Moment</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>ZXSHOOTS_ | Cinematic Photography</title>
+<meta name="description" content="ZXSHOOTS - Wedding photography, cinematic reels, car delivery shoots and professional video editing.">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#090909;--panel:#121212;--muted:#a4a4a4;--white:#f7f7f5;--accent:#d6ff3f;--line:#292929}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}
-.wrap{width:min(1160px,90%);margin:auto}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.logo{font:800 25px Outfit,sans-serif;letter-spacing:1px}.logo span{color:var(--accent)}.navlinks{display:flex;gap:30px;color:#d0d0d0;font-size:14px}.navlinks a:hover{color:var(--accent)}.nav-cta,.btn{background:var(--accent);color:#101010;padding:13px 20px;border:0;border-radius:5px;font-weight:700;cursor:pointer;display:inline-block}.hero{min-height:610px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:50px;padding:70px 0}.eyebrow{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase}.hero h1{font:800 clamp(48px,7vw,86px)/.98 Outfit,sans-serif;letter-spacing:-3px;margin:20px 0}.hero h1 em{color:var(--accent);font-style:normal}.hero p{color:#b6b6b6;max-width:490px;line-height:1.8;font-size:16px}.hero-actions{display:flex;align-items:center;gap:24px;margin-top:30px}.text-link{font-size:14px;border-bottom:1px solid #777;padding-bottom:5px}.hero-image{height:480px;border-radius:9px;overflow:hidden;position:relative;background:#222}.hero-image img{width:100%;height:100%;object-fit:cover;filter:brightness(.82)}.image-tag{position:absolute;bottom:20px;left:20px;background:#111d;padding:12px 16px;border:1px solid #ffffff40;border-radius:5px;font-size:12px;letter-spacing:1px}
-.section{padding:85px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:35px}.section h2{font:700 clamp(34px,4vw,50px)/1.05 Outfit;margin:10px 0}.section-head p{color:var(--muted);max-width:390px;line-height:1.7;margin:0}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service{background:var(--panel);border:1px solid var(--line);padding:28px;border-radius:8px;min-height:190px}.service .num{color:var(--accent);font-size:12px;letter-spacing:2px}.service h3{font:600 23px Outfit;margin:28px 0 9px}.service p{color:var(--muted);line-height:1.65;font-size:14px;margin:0}
-.gallery{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px}.gallery img{width:100%;height:300px;object-fit:cover;border-radius:7px;filter:saturate(.8)}.gallery img:first-child{height:390px;grid-row:span 2}.gallery img:nth-child(2),.gallery img:nth-child(3){height:188px}
-.booking{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:start}.booking-copy p{color:var(--muted);line-height:1.8}.booking-note{border-left:2px solid var(--accent);padding:12px 16px;color:#c7c7c7;font-size:13px;line-height:1.7;margin-top:25px}.form-card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:28px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.field{display:flex;flex-direction:column;gap:8px}.field.full{grid-column:1/-1}.field label{font-size:12px;color:#c5c5c5;font-weight:600}.field input,.field select,.field textarea{width:100%;background:#090909;color:white;border:1px solid #333;border-radius:5px;padding:13px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent)}.field textarea{resize:vertical;min-height:85px}.slots-title{font-size:12px;color:#c5c5c5;font-weight:600;margin:22px 0 12px}.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.slot{padding:11px 5px;background:#090909;color:#ddd;border:1px solid #363636;border-radius:5px;cursor:pointer;font-size:13px}.slot:hover,.slot.selected{border-color:var(--accent);color:var(--accent);background:#1a2110}.slot:disabled{opacity:.3;cursor:not-allowed;text-decoration:line-through}.submit{width:100%;margin-top:22px}.fine{font-size:11px;color:#858585;line-height:1.6;margin:12px 0 0}.success{display:none;margin-top:16px;padding:14px;border:1px solid #78932a;color:var(--accent);border-radius:5px;font-size:14px;line-height:1.6}
-.footer{padding:35px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:#929292;font-size:13px}.footer strong{color:white}.social{color:var(--accent)}
-@media(max-width:800px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding:55px 0}.hero-image{height:380px}.services{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery img:first-child{grid-column:1/-1;grid-row:auto;height:260px}.gallery img:nth-child(2),.gallery img:nth-child(3){height:180px}.booking{grid-template-columns:1fr}.section{padding:65px 0}}
-@media(max-width:480px){.nav{height:70px}.nav-cta{padding:10px 13px;font-size:12px}.hero h1{letter-spacing:-2px}.hero-image{height:300px}.form-card{padding:18px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.slots{grid-template-columns:repeat(2,1fr)}.section-head{display:block}.section-head p{margin-top:14px}.footer{flex-direction:column}}
+:root {
+  --bg:#090909;
+  --card:#151515;
+  --green:#d6ff3f;
+  --white:#fff;
+  --muted:#aaa;
+}
+* {box-sizing:border-box;margin:0;padding:0}
+html {scroll-behavior:smooth}
+body {
+  background:var(--bg);
+  color:var(--white);
+  font-family:'DM Sans',sans-serif;
+}
+a {color:inherit;text-decoration:none}
+.container {width:90%;max-width:1150px;margin:auto}
+
+/* NAVBAR */
+header {
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #292929;
+}
+.logo {
+  font:800 26px Outfit;
+  letter-spacing:1px;
+}
+.logo span {color:var(--green)}
+nav {display:flex;gap:25px}
+nav a {font-size:14px;color:#ddd}
+nav a:hover {color:var(--green)}
+.btn {
+  display:inline-block;
+  background:var(--green);
+  color:#000;
+  padding:13px 21px;
+  border-radius:5px;
+  font-weight:700;
+  border:0;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero {
+  min-height:570px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:40px;
+  padding:65px 0;
+}
+.tag {
+  color:var(--green);
+  letter-spacing:3px;
+  font-size:12px;
+  font-weight:bold;
+}
+.hero h1 {
+  font:800 clamp(48px,7vw,82px)/1 Outfit;
+  margin:22px 0;
+}
+.hero h1 span {color:var(--green)}
+.hero p {
+  color:var(--muted);
+  line-height:1.8;
+  max-width:480px;
+}
+.hero img {
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* SECTIONS */
+section {padding:75px 0}
+.heading {margin-bottom:30px}
+.heading h2 {
+  font:700 43px Outfit;
+  margin-top:10px;
+}
+.heading p {color:var(--muted);margin-top:10px}
+
+/* SERVICES */
+.services {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.service {
+  background:var(--card);
+  padding:28px;
+  border:1px solid #292929;
+  border-radius:8px;
+}
+.service h3 {
+  font:600 23px Outfit;
+  margin:20px 0 10px;
+}
+.service p {color:var(--muted);line-height:1.7}
+
+/* PHOTO GALLERY */
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+.gallery img {
+  width:100%;
+  height:270px;
+  object-fit:cover;
+  border-radius:8px;
+  transition:.3s;
+}
+.gallery img:hover {transform:scale(1.02)}
+
+/* VIDEO PORTFOLIO */
+.videos {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+.video-card {
+  background:var(--card);
+  border-radius:9px;
+  overflow:hidden;
+}
+.video-card video {
+  display:block;
+  width:100%;
+  aspect-ratio:9/16;
+  object-fit:cover;
+  background:#000;
+  max-height:520px;
+}
+.video-info {padding:17px}
+.video-info h3 {font:600 21px Outfit}
+.video-info p {color:var(--muted);font-size:13px;margin-top:6px}
+
+/* BOOKING */
+.booking-layout {
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:35px;
+  align-items:start;
+}
+.booking-text p {
+  color:var(--muted);
+  line-height:1.8;
+  margin-top:15px;
+}
+.form {
+  background:var(--card);
+  padding:28px;
+  border:1px solid #303030;
+  border-radius:10px;
+}
+.form-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+.field {
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.field.full {grid-column:1/-1}
+label {font-size:12px;color:#ccc}
+input,select,textarea {
+  background:#090909;
+  color:white;
+  border:1px solid #444;
+  padding:13px;
+  border-radius:5px;
+  width:100%;
+}
+textarea {min-height:85px;resize:vertical}
+.slot-title {margin:22px 0 12px;font-size:13px}
+.slots {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:9px;
+}
+.slot {
+  background:#090909;
+  border:1px solid #444;
+  color:white;
+  padding:12px 4px;
+  border-radius:5px;
+  cursor:pointer;
+}
+.slot.selected {
+  border-color:var(--green);
+  color:var(--green);
+  background:#1a2110;
+}
+.submit {width:100%;margin-top:22px}
+.notice {color:var(--muted);font-size:12px;margin-top:12px;line-height:1.6}
+#result {margin-top:15px;color:var(--green);line-height:1.6;white-space:pre-wrap}
+
+/* FOOTER */
+footer {
+  border-top:1px solid #333;
+  padding:30px 0;
+  color:var(--muted);
+  text-align:center;
+  line-height:2;
+}
+footer span {color:var(--green)}
+
+@media(max-width:750px) {
+  nav {display:none}
+  .hero,.booking-layout {grid-template-columns:1fr}
+  .hero img {height:300px}
+  .services {grid-template-columns:1fr}
+  .gallery {grid-template-columns:1fr 1fr}
+  .videos {grid-template-columns:1fr 1fr}
+  .heading h2 {font-size:34px}
+}
+@media(max-width:480px) {
+  .gallery {grid-template-columns:1fr}
+  .videos {grid-template-columns:1fr}
+  .form-grid {grid-template-columns:1fr}
+  .field.full {grid-column:auto}
+  .slots {grid-template-columns:repeat(2,1fr)}
+}
 </style>
 </head>
+
 <body>
-<header class="wrap nav">
+
+<header class="container">
   <a class="logo" href="#">ZX<span>SHOOTS</span>_</a>
-  <nav class="navlinks"><a href="#services">Services</a><a href="#work">Our work</a><a href="#booking">Book a shoot</a></nav>
-  <a class="nav-cta" href="#booking">BOOK YOUR SLOT ↗</a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Photos</a>
+    <a href="#videos">Videos</a>
+    <a href="#booking">Booking</a>
+  </nav>
+  <a href="#booking" class="btn">BOOK NOW ↗</a>
 </header>
 
+<!-- HOME -->
 <main>
-<section class="wrap hero">
+<section class="container hero" id="home">
   <div>
-    <div class="eyebrow">Shoot · Create · Inspire</div>
-    <h1>YOUR MOMENT.<br><em>OUR FRAME.</em></h1>
-    <p>We turn real moments into cinematic memories. From wedding stories and special events to car delivery shoots and creative reels — let's make something unforgettable.</p>
-    <div class="hero-actions"><a class="btn" href="#booking">Book a shoot ↗</a><a class="text-link" href="#work">Explore our work</a></div>
+    <div class="tag">SHOOT • CREATE • INSPIRE</div>
+    <h1>YOUR MOMENT.<br><span>OUR FRAME.</span></h1>
+    <p>Turning Moments Into Memories. Professional wedding shoots, car delivery shoots, cinematic reels and creative video editing.</p>
+    <br>
+    <a href="#booking" class="btn">BOOK YOUR SHOOT ↗</a>
   </div>
-  <div class="hero-image">
-    <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1200&q=85" alt="Wedding photography moment">
-    <div class="image-tag">CINEMATIC STORIES · ZXSHOOTS</div>
+  <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1000&q=85" alt="Wedding photography">
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="heading">
+      <div class="tag">OUR SERVICES</div>
+      <h2>What We Create.</h2>
+    </div>
+    <div class="services">
+      <div class="service">
+        <div class="tag">01</div>
+        <h3>Wedding Shoots</h3>
+        <p>Cinematic wedding photography and unforgettable memories.</p>
+      </div>
+      <div class="service">
+        <div class="tag">02</div>
+        <h3>Car Delivery Shoots</h3>
+        <p>Creative cinematic car delivery videos and reels.</p>
+      </div>
+      <div class="service">
+        <div class="tag">03</div>
+        <h3>Reels & Editing</h3>
+        <p>Professional social media videos and creative editing.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section" id="services"><div class="wrap">
-  <div class="section-head"><div><div class="eyebrow">What we do</div><h2>Made to be remembered.</h2></div><p>Every frame has a feeling. Choose a shoot and we'll bring your idea to life.</p></div>
-  <div class="services">
-    <article class="service"><div class="num">01 / EVENTS</div><h3>Wedding & Events</h3><p>Beautiful candid moments, cinematic highlights and event coverage.</p></article>
-    <article class="service"><div class="num">02 / AUTOMOTIVE</div><h3>Car Delivery Shoots</h3><p>Make your new ride's big day look as special as it feels.</p></article>
-    <article class="service"><div class="num">03 / SOCIAL</div><h3>Reels & Editing</h3><p>Creative Instagram reels, professional edits and visual storytelling.</p></article>
-  </div>
-</div></section>
-
-<section class="section" id="work"><div class="wrap">
-  <div class="section-head"><div><div class="eyebrow">Selected frames</div><h2>A glimpse of the vibe.</h2></div><p>Real stories. Thoughtful angles. A cinematic finish.</p></div>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85" alt="Wedding celebration">
-    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=85" alt="Car photography">
-    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=85" alt="Live event">
-  </div>
-</div></section>
-
-<section class="section" id="booking"><div class="wrap booking">
-  <div class="booking-copy"><div class="eyebrow">Let's plan your shoot</div><h2>Pick your date.<br><span style="color:var(--accent)">Save your slot.</span></h2><p>Choose a service, select a date and pick an available time. Send your request and we'll get in touch to confirm the booking.</p><div class="booking-note">Booking requests are subject to confirmation. We'll confirm the location, package and final price with you before the shoot.</div></div>
-  <form class="form-card" id="bookingForm">
-    <div class="form-grid">
-      <div class="field"><label for="name">YOUR NAME *</label><input id="name" name="name" placeholder="Enter your name" required></div>
-      <div class="field"><label for="phone">PHONE NUMBER *</label><input id="phone" name="phone" type="tel" placeholder="10-digit mobile number" pattern="[0-9+\-\s]{10,15}" required></div>
-      <div class="field"><label for="service">TYPE OF SHOOT *</label><select id="service" name="service" required><option value="">Choose a service</option><option>Wedding & Events</option><option>Car Delivery Shoot</option><option>Reels & Video Editing</option><option>Other / Custom Shoot</option></select></div>
-      <div class="field"><label for="date">PREFERRED DATE *</label><input id="date" name="date" type="date" required></div>
-      <div class="field full"><label for="location">SHOOT LOCATION</label><input id="location" name="location" placeholder="Area / city"></div>
+<!-- PHOTO GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <div class="heading">
+      <div class="tag">OUR PHOTOGRAPHY</div>
+      <h2>Captured Moments.</h2>
+      <p>Our photography portfolio.</p>
     </div>
-    <div class="slots-title">SELECT A TIME SLOT *</div>
-    <div class="slots" id="slots">
-      <button class="slot" type="button" data-time="09:00 AM">09:00 AM</button>
-      <button class="slot" type="button" data-time="11:00 AM">11:00 AM</button>
-      <button class="slot" type="button" data-time="01:00 PM">01:00 PM</button>
-      <button class="slot" type="button" data-time="03:00 PM">03:00 PM</button>
-      <button class="slot" type="button" data-time="05:00 PM">05:00 PM</button>
-      <button class="slot" type="button" data-time="06:00 PM">06:00 PM</button>
-      <button class="slot" type="button" data-time="07:00 PM">07:00 PM</button>
-      <button class="slot" type="button" data-time="08:00 PM">08:00 PM</button>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=85" alt="Wedding">
+      <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=85" alt="Car">
+      <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=85" alt="Event">
     </div>
-    <input type="hidden" id="selectedTime" name="time" required>
-    <div class="field full" style="margin-top:20px"><label for="message">TELL US MORE (OPTIONAL)</label><textarea id="message" name="message" placeholder="Event details, ideas or anything we should know..."></textarea></div>
-    <button class="btn submit" type="submit">REQUEST THIS SLOT ↗</button>
-    <p class="fine">This demo form prepares your booking request on this device. It does not reserve a slot or send your details until connected to a booking service.</p>
-    <div class="success" id="success" role="status"></div>
-  </form>
-</div></section>
+  </div>
+</section>
+
+<!-- VIDEO GALLERY -->
+<section id="videos">
+  <div class="container">
+    <div class="heading">
+      <div class="tag">WATCH OUR WORK</div>
+      <h2>Cinematic Videos.</h2>
+      <p>Watch our latest wedding films, reels and car shoots.</p>
+    </div>
+
+    <div class="videos">
+
+      <!-- Replace these paths with your uploaded MP4 files -->
+      <div class="video-card">
+        <video controls playsinline preload="metadata">
+          <source src="videos/wedding.mp4" type="video/mp4">
+          Your browser does not support video.
+        </video>
+        <div class="video-info">
+          <h3>Wedding Cinematic</h3>
+          <p>Wedding video by ZXSHOOTS</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video controls playsinline preload="metadata">
+          <source src="videos/car-delivery.mp4" type="video/mp4">
+          Your browser does not support video.
+        </video>
+        <div class="video-info">
+          <h3>Car Delivery Shoot</h3>
+          <p>Car cinematic by ZXSHOOTS</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video controls playsinline preload="metadata">
+          <source src="videos/event.mp4" type="video/mp4">
+          Your browser does not support video.
+        </video>
+        <div class="video-info">
+          <h3>Event Highlights</h3>
+          <p>Event coverage by ZXSHOOTS</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video controls playsinline preload="metadata">
+          <source src="videos/reel.mp4" type="video/mp4">
+          Your browser does not support video.
+        </video>
+        <div class="video-info">
+          <h3>Instagram Reels</h3>
+          <p>Creative editing by ZXSHOOTS</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="container booking-layout">
+    <div class="booking-text">
+      <div class="tag">RESERVE YOUR DATE</div>
+      <h2 style="font:700 43px Outfit;margin-top:15px">
+        Book Your<br><span style="color:var(--green)">Shoot Slot.</span>
+      </h2>
+      <p>Select your shoot type, preferred date and time. Send your booking request to ZXSHOOTS.</p>
+    </div>
+
+    <form class="form" id="bookingForm">
+      <div class="form-grid">
+        <div class="field">
+          <label>Your Name *</label>
+          <input name="name" required placeholder="Your name">
+        </div>
+        <div class="field">
+          <label>Phone Number *</label>
+          <input name="phone" type="tel" pattern="[0-9+\-\s]{10,15}" required placeholder="Mobile number">
+        </div>
+        <div class="field">
+          <label>Shoot Type *</label>
+          <select name="service" required>
+            <option value="">Select service</option>
+            <option>Wedding Shoot</option>
+            <option>Car Delivery Shoot</option>
+            <option>Event Shoot</option>
+            <option>Reels & Editing</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Date *</label>
+          <input name="date" id="date" type="date" required>
+        </div>
+        <div class="field full">
+          <label>Location</label>
+          <input name="location" placeholder="Your location">
+        </div>
+      </div>
+
+      <div class="slot-title">SELECT TIME SLOT *</div>
+      <div class="slots">
+        <button class="slot" type="button">09:00 AM</button>
+        <button class="slot" type="button">11:00 AM</button>
+        <button class="slot" type="button">01:00 PM</button>
+        <button class="slot" type="button">03:00 PM</button>
+        <button class="slot" type="button">05:00 PM</button>
+        <button class="slot" type="button">06:00 PM</button>
+        <button class="slot" type="button">07:00 PM</button>
+        <button class="slot" type="button">08:00 PM</button>
+      </div>
+
+      <input type="hidden" name="time" id="time" required>
+
+      <div class="field" style="margin-top:18px">
+        <label>Additional Details</label>
+        <textarea name="message" placeholder="Tell us about your shoot..."></textarea>
+      </div>
+
+      <button type="submit" class="btn submit">SEND BOOKING REQUEST ↗</button>
+      <div id="result"></div>
+      <p class="notice">Your request will open WhatsApp. Your booking is confirmed only after we reply and approve the slot.</p>
+    </form>
+  </div>
+</section>
 </main>
-<footer class="wrap footer"><div><strong>ZXSHOOTS_</strong> — Turning Moments Into Memories.</div><div>Follow our work on <a class="social" href="https://www.instagram.com/zxshoots_/" target="_blank" rel="noopener">@zxshoots_ ↗</a></div><div>© <span id="year"></span> ZXSHOOTS</div></footer>
+
+<footer>
+  <div class="container">
+    <h2 style="font:800 25px Outfit;color:white">ZX<span>SHOOTS</span>_</h2>
+    <p>Turning Moments Into Memories.</p>
+    <p>Instagram: <a href="https://www.instagram.com/zxshoots_/" style="color:var(--green)" target="_blank" rel="noopener">@zxshoots_</a></p>
+    <p>© <span id="year"></span> ZXSHOOTS. All Rights Reserved.</p>
+  </div>
+</footer>
 
 <script>
+// Set minimum booking date to today
 const dateInput = document.getElementById('date');
 const today = new Date();
-const localToday = new Date(today.getTime() - today.getTimezoneOffset()*60000).toISOString().slice(0,10);
-dateInput.min = localToday;
+dateInput.min = new Date(today.getTime()-today.getTimezoneOffset()*60000)
+  .toISOString().slice(0,10);
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
-let selected = '';
+// Time slot selection
+let selectedTime = '';
 document.querySelectorAll('.slot').forEach(button => {
   button.addEventListener('click', () => {
-    document.querySelectorAll('.slot').forEach(slot => slot.classList.remove('selected'));
+    document.querySelectorAll('.slot').forEach(b => b.classList.remove('selected'));
     button.classList.add('selected');
-    selected = button.dataset.time;
-    document.getElementById('selectedTime').value = selected;
+    selectedTime = button.textContent.trim();
+    document.getElementById('time').value = selectedTime;
   });
 });
 
-document.getElementById('bookingForm').addEventListener('submit', event => {
-  event.preventDefault();
-  if (!selected) {
-    document.getElementById('success').style.display = 'block';
-    document.getElementById('success').textContent = 'Please select a time slot before sending your request.';
+// Booking request through WhatsApp
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  if (!selectedTime) {
+    document.getElementById('result').textContent = 'Please select a time slot.';
     return;
   }
-  const data = new FormData(event.target);
-  const details = [
-    'ZXSHOOTS BOOKING REQUEST',
-    'Name: ' + data.get('name'),
-    'Phone: ' + data.get('phone'),
-    'Service: ' + data.get('service'),
-    'Date: ' + data.get('date'),
-    'Time: ' + data.get('time'),
-    'Location: ' + (data.get('location') || 'Not specified'),
-    'Details: ' + (data.get('message') || 'None')
-  ].join('\n');
-  const box = document.getElementById('success');
-  box.style.display = 'block';
-  box.textContent = 'Your request details are ready. Connect this form to WhatsApp, email or a booking database to receive real bookings. For now, copy the details below:\n' + details;
-  const copy = document.createElement('button');
-  copy.type = 'button';
-  copy.className = 'slot';
-  copy.style.marginTop = '12px';
-  copy.textContent = 'COPY BOOKING DETAILS';
-  copy.onclick = async () => {
-    try { await navigator.clipboard.writeText(details); copy.textContent = 'COPIED ✓'; }
-    catch { copy.textContent = 'Copy not available in this browser'; }
-  };
-  box.appendChild(document.createElement('br'));
-  box.appendChild(copy);
+
+  const data = new FormData(this);
+  const message =
+`ZXSHOOTS BOOKING REQUEST
+
+Name: ${data.get('name')}
+Phone: ${data.get('phone')}
+Shoot: ${data.get('service')}
+Date: ${data.get('date')}
+Time: ${data.get('time')}
+Location: ${data.get('location')}
+Details: ${data.get('message')}`;
+
+  // IMPORTANT: Replace 91XXXXXXXXXX with your WhatsApp number.
+  const whatsappNumber = '91XXXXXXXXXX';
+  const url = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message);
+
+  if (whatsappNumber === '91XXXXXXXXXX') {
+    document.getElementById('result').textContent =
+      'Please add your WhatsApp number in the website code before using bookings.';
+    return;
+  }
+
+  window.open(url, '_blank');
 });
 </script>
+
 </body>
 </html>
